@@ -21,3 +21,30 @@ print(money)
 
 let number: Int = 30
 number.description
+
+struct PersonStruct {
+    let firstName: String
+    let lastName: String
+    let isAlive: Bool
+}
+
+let personStruct = PersonStruct(firstName: "Steve", lastName: "Jobs", isAlive: false)
+
+class PersonClass {
+    let firstName: String
+    let lastName: String
+    let isAlive: Bool
+
+    init(primeiro: String, lastName: String, isAlive: Bool) {
+        self.firstName = primeiro
+        self.lastName = lastName
+        self.isAlive = isAlive
+    }
+    
+    func play() {
+        print("Jogando bola")
+    }
+}
+
+var personClass: PersonClass = PersonClass(primeiro: "Steve", lastName: "Jobs", isAlive: false)
+personClass.firstName
