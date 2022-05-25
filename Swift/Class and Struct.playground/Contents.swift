@@ -71,12 +71,14 @@ print(personClass2.lastName)
 /// Herança
 class AdultPerson: PersonClass {
     let boleto: Int
-    init(boleto: Int) {
+    init(boleto: Int, firstName: String, lastName: String, isAlive: Bool) {
         self.boleto = boleto
+        super.init(primeiro: firstName, lastName: lastName, isAlive: isAlive)
     }
 }
 
-let adultPerson = AdultPerson(primeiro: "Leo",
-                              lastName: "Bandeira",
+let adultPerson = AdultPerson(boleto: 2000,
+                              firstName: "Leo",
+                              lastName: "Cunha",
                               isAlive: true)
 
