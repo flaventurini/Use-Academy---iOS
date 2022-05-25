@@ -67,3 +67,16 @@ print(personStruct.lastName)
 
 print(personClass.lastName)
 print(personClass2.lastName)
+
+/// Herança
+class AdultPerson: PersonClass {
+    let boleto: Int
+    init(boleto: Int) {
+        self.boleto = boleto
+    }
+}
+
+let adultPerson = AdultPerson(primeiro: "Leo",
+                              lastName: "Bandeira",
+                              isAlive: true)
+
