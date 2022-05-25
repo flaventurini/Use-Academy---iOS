@@ -17,22 +17,24 @@ var steve = Steve()
 steve.isAlive
 steve.birthdayYear
 let money = steve.makeMoney(idea: "iPad")
-print(money)
+//print(money)
 
 let number: Int = 30
 number.description
 
 struct PersonStruct {
     let firstName: String
-    let lastName: String
+    var lastName: String
     let isAlive: Bool
 }
 
-let personStruct = PersonStruct(firstName: "Steve", lastName: "Jobs", isAlive: false)
+let personStruct = PersonStruct(firstName: "Steve",
+                                lastName: "Jobs",
+                                isAlive: false)
 
 class PersonClass {
     let firstName: String
-    let lastName: String
+    var lastName: String
     let isAlive: Bool
 
     init(primeiro: String, lastName: String, isAlive: Bool) {
@@ -46,5 +48,22 @@ class PersonClass {
     }
 }
 
-var personClass: PersonClass = PersonClass(primeiro: "Steve", lastName: "Jobs", isAlive: false)
+var personClass: PersonClass = PersonClass(primeiro: "Steve",
+                                           lastName: "Jobs",
+                                           isAlive: false)
 personClass.firstName
+
+
+///Cópia e referência
+
+var personStruct2 = personStruct
+var personClass2 = personClass
+
+personClass2.lastName = "Wozniak"
+personStruct2.lastName = "Wozniak"
+
+print(personStruct2.lastName)
+print(personStruct.lastName)
+
+print(personClass.lastName)
+print(personClass2.lastName)
