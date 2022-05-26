@@ -30,7 +30,7 @@ class Carro {
     }
 }
 
-class ContaCorrente {
+/* class ContaCorrente {
     func calculaCredito() {
         getCheque()
         getBalance()
@@ -45,9 +45,10 @@ class ContaCorrente {
         
     }
 }
+*/
 
 let uno = Carro(portas: 2, cor: "vermelho", velocidadeMaxima: 200)
 //uno.ligarArCondicionado()
 //uno.acelerar()
 
-print("velocidade", uno.velocidadeMaxima)
+print("velocidade", uno.getVelocidade())
